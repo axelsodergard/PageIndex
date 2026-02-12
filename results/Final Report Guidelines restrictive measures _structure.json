@@ -1,0 +1,146 @@
+{
+  "doc_name": "Final Report Guidelines restrictive measures .pdf",
+  "structure": [
+    {
+      "title": "Preface",
+      "start_index": 1,
+      "end_index": 3,
+      "node_id": "0000",
+      "summary": "The partial document outlines two sets of guidelines issued by the European Banking Authority (EBA) to ensure compliance with Union and national restrictive measures. The guidelines aim to address challenges arising from divergent expectations by competent authorities regarding financial institutions' internal policies, procedures, and controls. The first set of guidelines (EBA/GL/2024/14) applies to all institutions under the EBA\u2019s supervisory remit, focusing on governance and risk management systems to prevent breaches or evasion of restrictive measures. The second set (EBA/GL/2024/15) is specific to payment service providers (PSPs) and crypto-asset service providers (CASPs), detailing compliance requirements for transfers of funds or crypto-assets. The document also includes accompanying materials such as cost-benefit analysis, impact assessment, and feedback from public consultations. The guidelines aim to establish common EU standards, mitigate legal and reputational risks, and ensure effective implementation of restrictive measures."
+    },
+    {
+      "title": "Executive Summary",
+      "start_index": 3,
+      "end_index": 4,
+      "node_id": "0001",
+      "summary": "The partial document outlines the European Banking Authority's (EBA) guidelines aimed at ensuring compliance with Union and national restrictive measures by financial institutions, payment service providers (PSPs), and crypto-asset service providers (CASPs). It highlights the challenges posed by divergent supervisory expectations across EU Member States, which can lead to legal and reputational risks, ineffective compliance approaches, and consumer detriment. The document introduces two sets of guidelines: EBA/GL/2024/14 for all institutions under EBA supervision, focusing on governance and risk management systems, and EBA/GL/2024/15 for PSPs and CASPs, addressing compliance during fund and crypto-asset transfers. Additionally, it provides background on the legislative framework, including the adoption of Regulation (EU) 2023/1113, and discusses the lack of uniform implementation of restrictive measures across the EU, as identified by the EBA and the European Commission."
+    },
+    {
+      "title": "Background and rationale",
+      "start_index": 4,
+      "end_index": 8,
+      "node_id": "0002",
+      "summary": "The partial document outlines the European Banking Authority's (EBA) guidelines on internal policies, procedures, and controls to ensure compliance with Union and national restrictive measures. It provides background on the legislative framework, including the adoption of Regulation (EU) 2023/1113 (FTR), and highlights the need for uniform implementation of restrictive measures across EU Member States. The document identifies challenges such as inconsistent supervisory approaches, weaknesses in financial institutions' governance, screening systems, and risk management, and the risks posed by non-compliance.\n\nThe guidelines are divided into two sets: one addressing all financial institutions under the EBA's remit, focusing on governance arrangements, exposure assessments, and resource allocation; and another specific to payment service providers (PSPs) and crypto-asset service providers (CASPs), detailing screening systems, dataset definitions, and risk management for transfers of funds and crypto-assets. Institutions are required to apply these guidelines proportionately based on their size, activities, and exposure to restrictive measures.\n\nThe document also emphasizes the role of competent supervisory authorities in assessing compliance and outlines the interaction of these guidelines with other EBA guidelines related to customer due diligence, governance, outsourcing, ICT security, and compliance management. The guidelines will take effect on 30 December 2025, with further regulatory changes anticipated by 2027."
+    },
+    {
+      "title": "Guidelines EBA/GL/2024/14",
+      "start_index": 8,
+      "end_index": 10,
+      "nodes": [
+        {
+          "title": "Compliance and reporting obligations",
+          "start_index": 10,
+          "end_index": 11,
+          "node_id": "0004",
+          "summary": "The partial document outlines guidelines issued under Regulation (EU) No 1093/2010 to ensure compliance with Union and national restrictive measures. It emphasizes the obligations of competent authorities and financial institutions to implement internal policies, procedures, and controls in line with relevant EU directives (Directive 2013/36/EU, Directive (EU) 2015/2366, and Directive 2009/110/EC). The document specifies reporting requirements, including notifications of compliance to the European Banking Authority (EBA), and addresses the scope, subject matter, and definitions relevant to the guidelines. It identifies the addressees as competent authorities and financial institutions subject to EU regulation and supervision, providing a framework for assessing compliance with restrictive measures."
+        },
+        {
+          "title": "Subject matter, scope and definitions",
+          "start_index": 11,
+          "end_index": 12,
+          "node_id": "0005",
+          "summary": "The partial document outlines guidelines for financial institutions and competent authorities to establish internal policies, procedures, and controls ensuring compliance with Union and national restrictive measures. It specifies the scope, subject matter, and definitions, referencing relevant EU directives and regulations. The guidelines are addressed to competent authorities and financial institutions subject to regulation and supervision under specific directives. It provides definitions for terms like \"restrictive measures\" and sets the implementation date as 30 December 2025."
+        },
+        {
+          "title": "Implementation",
+          "start_index": 12,
+          "end_index": 13,
+          "node_id": "0006",
+          "summary": "The partial document outlines guidelines for financial institutions to establish internal policies, procedures, and controls to ensure compliance with Union and national restrictive measures. It defines restrictive measures and specifies their application starting from December 30, 2025. Key points include the identification and assessment of business areas vulnerable to restrictive measures, the implementation of proportionate and effective compliance frameworks, and the establishment of governance structures. The management body is tasked with approving compliance strategies, overseeing implementation, and ensuring awareness of exposure to restrictive measures. Provisions are also made for single-person-directed institutions and parent undertakings within groups."
+        },
+        {
+          "title": "Guidelines on internal policies, procedures and controls to ensure the implementation of Union and national restrictive measures",
+          "start_index": 13,
+          "end_index": 22,
+          "node_id": "0007",
+          "summary": "The partial document outlines guidelines for financial institutions to establish internal policies, procedures, and controls to ensure compliance with Union and national restrictive measures. Key points include:\n\n1. **General Provisions**: Financial institutions must assess their exposure to restrictive measures and implement proportionate policies and controls based on their size, nature, and complexity.\n\n2. **Governance Framework**: The management body is responsible for approving compliance strategies, overseeing implementation, and ensuring awareness of exposure to restrictive measures. Parent institutions must ensure group-wide compliance and coordinated assessments.\n\n3. **Role of Management Body**: Supervisory and management functions include monitoring internal controls, approving risk management frameworks, ensuring adequate resources, and addressing deficiencies. Parent institutions must ensure alignment across subsidiaries.\n\n4. **Senior Staff Member**: Institutions must appoint a senior staff member to oversee compliance, develop policies, and report violations. This role may be combined with other functions if justified, provided there are no conflicts of interest.\n\n5. **Restrictive Measures Exposure Assessment**: Institutions must assess exposure to restrictive measures, considering geographic, customer, product, and delivery channel risks. Assessments must be updated regularly and documented.\n\n6. **Effectiveness of Policies and Controls**: Policies must ensure immediate compliance with restrictive measures, including processes for updates, investigations, and reporting violations. Institutions must address deficiencies and ensure proper organizational structures.\n\n7. **Training**: Regular, role-specific training must be provided to staff to ensure awareness of restrictive measures, exposure assessments, and compliance procedures. Training plans must be documented and demonstrable.\n\n8. **Impact Assessment**: The guidelines aim to address inconsistencies in the application of restrictive measures across Member States, promote uniform compliance, and safeguard EU values. They include a cost-benefit analysis to evaluate implementation impacts."
+        },
+        {
+          "title": "Accompanying documents",
+          "start_index": 22,
+          "end_index": 26,
+          "nodes": [
+            {
+              "title": "Cost-benefit analysis / impact assessment",
+              "start_index": 22,
+              "end_index": 25,
+              "node_id": "0009",
+              "summary": "The cost-benefit analysis assesses the main policy options in the EBA guidelines on restrictive measures, as required by Article 16(2) of Regulation (EU) No 1093/2010. It identifies the problem of non-uniform application of restrictive measures across the EU, which enables circumvention. Two key policy decisions are analyzed: (1) adding guidance on restrictive measures exposure assessments, chosen because it helps institutions implement proportionate compliance despite differing risk profiles across AML/CFT and restrictive measures contexts; and (2) requiring institutions to appoint a senior staff member responsible for restrictive measures compliance, chosen to enhance visibility, accountability, and quality of compliance frameworks, with proportionality provisions allowing the role to be combined with existing functions such as the AML/CFT compliance officer. The analysis concludes that the costs of implementation are outweighed by benefits including reduced breach risk, support for EU values, international peace and security, democracy, and human rights."
+            },
+            {
+              "title": "Feedback on the public consultation",
+              "start_index": 25,
+              "end_index": 26,
+              "node_id": "0010",
+              "summary": "The partial document outlines guidelines issued by the European Banking Authority (EBA) to ensure financial institutions and competent authorities implement Union and national restrictive measures effectively. Key points include:\n\n1. **Compliance and Reporting Obligations**: Financial institutions and authorities must comply with the guidelines, report their compliance status to the EBA, and address non-compliance issues.\n\n2. **Subject Matter and Scope**: The guidelines specify internal policies, procedures, and controls required for compliance with restrictive measures under relevant EU directives.\n\n3. **Governance Framework**: Financial institutions must establish governance frameworks, with management bodies responsible for approving and overseeing compliance strategies, ensuring adequate resources, and addressing risks of circumvention.\n\n4. **Senior Staff Member Role**: Institutions must appoint a senior staff member responsible for compliance with restrictive measures, with flexibility to delegate tasks while maintaining accountability.\n\n5. **Restrictive Measures Exposure Assessment**: Institutions must assess their exposure to restrictive measures, considering geographic, customer, product, and delivery channel risks, and update assessments regularly.\n\n6. **Effectiveness of Policies and Controls**: Policies and controls must ensure immediate and full compliance with restrictive measures, including processes for updating lists, investigating matches, and reporting violations.\n\n7. **Training**: Regular, tailored training for staff on restrictive measures, exposure assessments, and compliance policies is required.\n\n8. **Cost-Benefit Analysis**: The guidelines aim to enhance compliance while balancing costs, supporting EU values, international peace, and human rights.\n\n9. **Public Consultation Feedback**: The document references feedback from consultations to refine the guidelines."
+            }
+          ],
+          "node_id": "0008",
+          "summary": "The partial document outlines guidelines developed by the European Banking Authority (EBA) to ensure the implementation of Union and national restrictive measures. It includes a cost-benefit analysis and impact assessment, as required by Article 16(2) of Regulation (EU) No 1093/2010, focusing on the potential costs and benefits of the proposed policies. The document identifies problems such as the lack of uniform application of restrictive measures across EU Member States, which can lead to circumvention and inconsistent compliance by financial institutions. It highlights the EBA's mandate under Regulation (EU) 2023/1113 to issue guidelines on internal policies, procedures, and controls for financial institutions and supervisors to ensure compliance with restrictive measures, including those related to fund and crypto-asset transfers. The guidelines aim to establish common practices and a shared understanding among financial institutions to enhance compliance and safeguard EU values, international peace, democracy, the rule of law, and human rights."
+        }
+      ],
+      "node_id": "0003",
+      "summary": "The partial document outlines guidelines issued by the European Banking Authority (EBA) under Article 16 of Regulation (EU) No 1093/2010. It emphasizes the importance of internal policies, procedures, and controls to ensure compliance with Union and national restrictive measures. The document specifies compliance and reporting obligations for competent authorities and financial institutions, requiring them to incorporate the guidelines into their practices. It mandates notification to the EBA regarding compliance status, with non-compliance being assumed in the absence of notification. Notifications and changes in compliance status must be submitted using the prescribed form and will be published on the EBA website."
+    },
+    {
+      "title": "Guidelines EBA/GL/2024/15",
+      "start_index": 26,
+      "end_index": 28,
+      "nodes": [
+        {
+          "title": "Compliance and reporting obligations",
+          "start_index": 28,
+          "end_index": 29,
+          "node_id": "0012",
+          "summary": "The partial document outlines guidelines issued under Regulation (EU) No 1093/2010 to ensure compliance with Union and national restrictive measures. It covers compliance and reporting obligations for competent authorities, payment service providers (PSPs), and crypto-asset service providers (CASPs), including the requirement to notify the European Banking Authority (EBA) regarding compliance status. The document specifies internal policies, procedures, and controls for PSPs and CASPs to implement restrictive measures effectively during fund and crypto-asset transfers, as defined in Regulation (EU) 2023/1113. It also defines key terms such as restrictive measures and targeted financial sanctions, and identifies the addressees of the guidelines, including competent authorities and financial institutions."
+        },
+        {
+          "title": "Subject matter, scope and definitions",
+          "start_index": 29,
+          "end_index": 30,
+          "node_id": "0013",
+          "summary": "The partial document outlines guidelines for internal policies, procedures, and controls that payment service providers (PSPs) and crypto-asset service providers (CASPs) must implement to ensure compliance with Union and national restrictive measures. It specifies the scope, subject matter, and definitions relevant to Regulation (EU) 2023/1113, including terms like restrictive measures, targeted financial sanctions, and sectoral restrictive measures. The guidelines are addressed to competent authorities supervising PSPs and CASPs, as well as financial institutions defined under EU regulations. The document also establishes the date of application as 30 December 2025."
+        },
+        {
+          "title": "Implementation",
+          "start_index": 30,
+          "end_index": 31,
+          "node_id": "0014",
+          "summary": "The partial document outlines guidelines for internal policies, procedures, and controls to ensure compliance with Union and national restrictive measures under Regulation (EU) 2023/1113. It emphasizes the need for Payment Service Providers (PSPs) and Crypto-Asset Service Providers (CASPs) to establish systems to identify subjects of restrictive measures, prevent financial transactions or services prohibited by such measures, and mitigate risks of circumvention. The document also discusses sectoral restrictive measures, such as arms embargoes and economic restrictions, and provides guidance on implementing effective screening systems tailored to the size, nature, and complexity of the entities' operations."
+        },
+        {
+          "title": "Guidelines on internal policies, procedures and controls to ensure the implementation of Union and national restrictive measures under Regulation (EU) 2023/1113",
+          "start_index": 31,
+          "end_index": 43,
+          "node_id": "0015",
+          "summary": "The partial document outlines comprehensive guidelines for Payment Service Providers (PSPs) and Crypto-Asset Service Providers (CASPs) to ensure compliance with Union and national restrictive measures under Regulation (EU) 2023/1113. Key points include:\n\n1. **Internal Policies, Procedures, and Controls**: PSPs and CASPs must establish systems to identify subjects of restrictive measures, prevent financial transactions or services prohibited by such measures, and mitigate risks of circumvention.\n\n2. **Screening Systems**: Guidelines emphasize the selection, calibration, and regular review of screening systems to reliably identify targets of restrictive measures, including the use of \"fuzzy matching\" techniques and geolocation tools.\n\n3. **List Management and Data Screening**: PSPs and CASPs must manage restrictive measures lists, update datasets promptly, and define the types of data to be screened, including customer information and transaction details.\n\n4. **Customer and Transaction Screening**: Regular screening of customer databases and transfers of funds or crypto-assets is required, with specific triggers for screening events and detailed data requirements.\n\n5. **Outsourcing and Third-Party Reliance**: PSPs and CASPs must ensure compliance with restrictive measures when outsourcing services, maintaining accountability and monitoring service providers.\n\n6. **Alert Management and Due Diligence**: Policies for investigating alerts, analyzing matches, and conducting due diligence are outlined, including steps to assess ownership or control by designated persons.\n\n7. **Freezing and Reporting Measures**: PSPs and CASPs must suspend operations, freeze funds or crypto-assets, and report actions or violations to relevant authorities.\n\n8. **Sectoral and Circumvention Controls**: Specific controls for sectoral restrictive measures and measures to detect circumvention attempts are detailed, including aggregated analysis of payment flows.\n\n9. **Ongoing Effectiveness**: Regular testing and assessment of screening systems are required to ensure reliability and compliance.\n\n10. **Impact Assessment**: The guidelines aim to create uniformity in the application of restrictive measures across the EU, addressing inconsistencies and supporting PSPs, CASPs, and supervisors in implementing effective systems and controls."
+        },
+        {
+          "title": "Accompanying documents",
+          "start_index": 43,
+          "end_index": 76,
+          "nodes": [
+            {
+              "title": "Cost-benefit analysis / impact assessment",
+              "start_index": 43,
+              "end_index": 47,
+              "node_id": "0017",
+              "summary": "The partial document outlines the European Banking Authority's (EBA) Guidelines on internal policies, procedures, and controls to ensure compliance with Union and national restrictive measures under Regulation (EU) 2023/1113. It includes a cost-benefit analysis and impact assessment of the Guidelines, addressing the problem of non-uniform application of restrictive measures across the EU. The Guidelines aim to create a common understanding among Payment Service Providers (PSPs), Crypto-Asset Service Providers (CASPs), and their supervisors regarding effective systems and controls for compliance. Key policy options are discussed, including guidance on screening systems based on restrictive measures exposure assessments and complementing list-based approaches with Know Your Customer (KYC) measures for customers and beneficial owners. The document also summarizes feedback from public consultations, highlighting support for the Guidelines and suggestions for alignment with other standards, such as the AML Regulation and SEPA Regulation. Changes to the Guidelines are planned after the AML Regulation enters into force in July 2027."
+            },
+            {
+              "title": "Feedback on the public consultation",
+              "start_index": 47,
+              "end_index": 76,
+              "node_id": "0018",
+              "summary": "The partial document outlines the European Banking Authority's (EBA) guidelines on internal policies, procedures, and controls for implementing Union and national restrictive measures. It summarizes feedback from a public consultation, highlighting key issues raised by respondents and the EBA's analysis and amendments. Main points include:\n\n1. **Public Consultation Feedback**: Respondents supported the guidelines for creating common standards to reduce compliance costs and avoid fines. Suggestions included aligning with new regulations like the AML Regulation (EU) 2024/1624 and SEPA Regulation (EU) 2024/886.\n\n2. **Key Issues Addressed**:\n   - Clarification of roles, such as the compliance officer for restrictive measures, and their alignment with AML compliance functions.\n   - Integration of restrictive measures exposure assessments into AML/CFT risk assessments.\n   - Definition of beneficial ownership thresholds (50% for restrictive measures).\n   - Interaction between risk-based and rules-based approaches in compliance.\n\n3. **Guidelines Adjustments**:\n   - Proportionality in policies based on institution size, complexity, and exposure.\n   - Flexibility in screening systems and data management, including handling aliases, transliterations, and free-text fields.\n   - Clarifications on intra-group outsourcing and reliance on third parties.\n\n4. **Sectoral and List-Based Measures**:\n   - Guidance on compliance with sectoral sanctions, including screening transaction details and geographic risks.\n   - Emphasis on detecting circumvention attempts and reporting violations.\n\n5. **Procedures for Exemptions and Lifting Measures**: Institutions must establish processes for handling exemptions and releasing funds when sanctions are lifted.\n\n6. **Effectiveness and Monitoring**: Institutions are required to ensure the ongoing effectiveness of policies, procedures, and systems, with proportional reporting of deficiencies to management bodies.\n\nThe document reflects the EBA's efforts to harmonize practices, address stakeholder concerns, and ensure compliance with evolving regulatory frameworks."
+            }
+          ],
+          "node_id": "0016",
+          "summary": "The partial document outlines guidelines developed by the European Banking Authority (EBA) to ensure the implementation of Union and national restrictive measures. It includes a cost-benefit analysis and impact assessment, as required by Article 16(2) of Regulation (EU) No 1093/2010, focusing on the costs and benefits of the proposed policies. The document identifies the problem of non-uniform application of restrictive measures across the EU, which undermines their effectiveness in safeguarding EU values, international peace, democracy, the rule of law, and human rights. It highlights the EBA's mandate under Article 23 of Regulation (EU) 2023/1113 to issue guidelines for Payment Service Providers (PSPs) and Crypto-Asset Service Providers (CASPs) on internal policies, procedures, and controls to ensure compliance with restrictive measures. The policy objectives aim to create a common understanding among PSPs, CASPs, and supervisors regarding effective systems and controls, promoting convergence in practices. The document also references legislative developments, including the AML/CFT package and the recast of the Transfer of Funds Regulation (TFR)."
+        }
+      ],
+      "node_id": "0011",
+      "summary": "The partial document outlines guidelines for internal policies, procedures, and controls to ensure the implementation of Union and national restrictive measures under Regulation (EU) 2023/1113. It specifies compliance and reporting obligations for competent authorities, payment service providers (PSPs), and crypto-asset service providers (CASPs) under Article 16 of Regulation (EU) No 1093/2010. The document emphasizes the need for authorities to incorporate the guidelines into their practices, report their compliance status to the European Banking Authority (EBA), and notify any changes in compliance. Notifications are required to be submitted through the EBA website and will be published publicly."
+    }
+  ]
+}

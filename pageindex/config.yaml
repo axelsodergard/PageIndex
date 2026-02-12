@@ -6,3 +6,8 @@ if_add_node_id: "yes"
 if_add_node_summary: "yes"
 if_add_doc_description: "no"
 if_add_node_text: "no"
+
+# Retrieval defaults
+retrieval_token_budget: 150000
+retrieval_max_nodes: 15
+retrieval_tree_threshold: 30

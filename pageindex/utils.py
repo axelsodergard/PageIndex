@@ -19,16 +19,49 @@ from types import SimpleNamespace as config
 
 CHATGPT_API_KEY = os.getenv("CHATGPT_API_KEY")
 
+# Azure OpenAI configuration
+AZURE_OPENAI_ENDPOINT = os.getenv("AZURE_OPENAI_ENDPOINT")
+AZURE_OPENAI_API_KEY = os.getenv("AZURE_OPENAI_API_KEY")
+AZURE_OPENAI_API_VERSION = os.getenv("AZURE_OPENAI_API_VERSION")
+AZURE_OPENAI_DEPLOYMENT = os.getenv("AZURE_OPENAI_DEPLOYMENT")
+USE_AZURE = all([AZURE_OPENAI_ENDPOINT, AZURE_OPENAI_API_KEY, AZURE_OPENAI_API_VERSION, AZURE_OPENAI_DEPLOYMENT])
+
+def _create_client(api_key=None):
+    if USE_AZURE:
+        return openai.AzureOpenAI(
+            azure_endpoint=AZURE_OPENAI_ENDPOINT,
+            api_key=AZURE_OPENAI_API_KEY,
+            api_version=AZURE_OPENAI_API_VERSION,
+        )
+    return openai.OpenAI(api_key=api_key or CHATGPT_API_KEY)
+
+def _create_async_client(api_key=None):
+    if USE_AZURE:
+        return openai.AsyncAzureOpenAI(
+            azure_endpoint=AZURE_OPENAI_ENDPOINT,
+            api_key=AZURE_OPENAI_API_KEY,
+            api_version=AZURE_OPENAI_API_VERSION,
+        )
+    return openai.AsyncOpenAI(api_key=api_key or CHATGPT_API_KEY)
+
+def _get_deployment(model):
+    if USE_AZURE:
+        return AZURE_OPENAI_DEPLOYMENT
+    return model
+
 def count_tokens(text, model=None):
     if not text:
         return 0
-    enc = tiktoken.encoding_for_model(model)
+    try:
+        enc = tiktoken.encoding_for_model(model)
+    except KeyError:
+        enc = tiktoken.encoding_for_model("gpt-4o")
     tokens = enc.encode(text)
     return len(tokens)
 
-def ChatGPT_API_with_finish_reason(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
+def ChatGPT_API_with_finish_reason(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None, temperature=0):
     max_retries = 10
-    client = openai.OpenAI(api_key=api_key)
+    client = _create_client(api_key)
     for i in range(max_retries):
         try:
             if chat_history:
@@ -36,12 +69,11 @@ def ChatGPT_API_with_finish_reason(model, prompt, api_key=CHATGPT_API_KEY, chat_
                 messages.append({"role": "user", "content": prompt})
             else:
                 messages = [{"role": "user", "content": prompt}]
-            
-            response = client.chat.completions.create(
-                model=model,
-                messages=messages,
-                temperature=0,
-            )
+
+            kwargs = dict(model=_get_deployment(model), messages=messages)
+            if temperature is not None:
+                kwargs["temperature"] = temperature
+            response = client.chat.completions.create(**kwargs)
             if response.choices[0].finish_reason == "length":
                 return response.choices[0].message.content, "max_output_reached"
             else:
@@ -58,9 +90,9 @@ def ChatGPT_API_with_finish_reason(model, prompt, api_key=CHATGPT_API_KEY, chat_
 
 
 
-def ChatGPT_API(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
+def ChatGPT_API(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None, temperature=0):
     max_retries = 10
-    client = openai.OpenAI(api_key=api_key)
+    client = _create_client(api_key)
     for i in range(max_retries):
         try:
             if chat_history:
@@ -68,12 +100,11 @@ def ChatGPT_API(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
                 messages.append({"role": "user", "content": prompt})
             else:
                 messages = [{"role": "user", "content": prompt}]
-            
-            response = client.chat.completions.create(
-                model=model,
-                messages=messages,
-                temperature=0,
-            )
+
+            kwargs = dict(model=_get_deployment(model), messages=messages)
+            if temperature is not None:
+                kwargs["temperature"] = temperature
+            response = client.chat.completions.create(**kwargs)
    
             return response.choices[0].message.content
         except Exception as e:
@@ -86,17 +117,16 @@ def ChatGPT_API(model, prompt, api_key=CHATGPT_API_KEY, chat_history=None):
                 return "Error"
             
 
-async def ChatGPT_API_async(model, prompt, api_key=CHATGPT_API_KEY):
+async def ChatGPT_API_async(model, prompt, api_key=CHATGPT_API_KEY, temperature=0):
     max_retries = 10
     messages = [{"role": "user", "content": prompt}]
     for i in range(max_retries):
         try:
-            async with openai.AsyncOpenAI(api_key=api_key) as client:
-                response = await client.chat.completions.create(
-                    model=model,
-                    messages=messages,
-                    temperature=0,
-                )
+            async with _create_async_client(api_key) as client:
+                kwargs = dict(model=_get_deployment(model), messages=messages)
+                if temperature is not None:
+                    kwargs["temperature"] = temperature
+                response = await client.chat.completions.create(**kwargs)
                 return response.choices[0].message.content
         except Exception as e:
             print('************* Retrying *************')
@@ -676,6 +706,81 @@ def format_structure(structure, order=None):
     elif isinstance(structure, list):
         structure = [format_structure(item, order) for item in structure]
     return structure
+
+
+def build_node_index(structure, pdf_pages):
+    """Walk the tree and return a flat dict {node_id: {node_data + token_count + depth + parent_id}}.
+    Pre-computes token count per node by summing pdf_pages[i][1] across the node's page range.
+    """
+    index = {}
+
+    def _walk(node, depth=0, parent_id=None):
+        if isinstance(node, list):
+            for item in node:
+                _walk(item, depth, parent_id)
+        elif isinstance(node, dict):
+            node_id = node.get('node_id')
+            if node_id is None:
+                return
+            start = node.get('start_index', 1)
+            end = node.get('end_index', start)
+            # Sum token counts across pages (1-based page indices)
+            token_count = sum(
+                pdf_pages[p - 1][1] for p in range(start, end + 1)
+                if 0 <= p - 1 < len(pdf_pages)
+            )
+            index[node_id] = {
+                'node_id': node_id,
+                'title': node.get('title', ''),
+                'start_index': start,
+                'end_index': end,
+                'summary': node.get('summary', ''),
+                'token_count': token_count,
+                'depth': depth,
+                'parent_id': parent_id,
+            }
+            if node.get('nodes'):
+                _walk(node['nodes'], depth + 1, node_id)
+
+    _walk(structure)
+    return index
+
+
+def get_top_level_nodes(structure, max_depth=1):
+    """Return a shallow copy of the tree truncated at max_depth.
+    Used by hierarchical search phase 1 to show only top-level branches.
+    """
+    def _truncate(node, current_depth=0):
+        if isinstance(node, list):
+            return [_truncate(item, current_depth) for item in node]
+        elif isinstance(node, dict):
+            result = {k: v for k, v in node.items() if k != 'nodes'}
+            if current_depth < max_depth and node.get('nodes'):
+                result['nodes'] = _truncate(node['nodes'], current_depth + 1)
+            return result
+        return node
+
+    return _truncate(structure)
+
+
+def get_subtree(structure, node_id):
+    """Return the full subtree rooted at a given node_id.
+    Used by hierarchical search phase 2 to drill into selected branches.
+    """
+    def _find(node, target_id):
+        if isinstance(node, list):
+            for item in node:
+                result = _find(item, target_id)
+                if result is not None:
+                    return result
+        elif isinstance(node, dict):
+            if node.get('node_id') == target_id:
+                return node
+            if node.get('nodes'):
+                return _find(node['nodes'], target_id)
+        return None
+
+    return _find(structure, node_id)
 
 
 class ConfigLoader:

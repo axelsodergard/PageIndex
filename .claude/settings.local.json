@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config:*)",
+      "WebSearch",
+      "Bash(\"C:\\\\Users\\\\Axel.Sodergard\\\\OneDrive - Advisense AB\\\\Skrivbordet\\\\DMIV\\\\PageIndex\\\\venv\\\\Scripts\\\\activate.bat\")",
+      "Bash(python run_pageindex.py:*)",
+      "Bash(pip install:*)",
+      "Bash(python -c \"import pymupdf; doc=pymupdf.open\\(r''tests\\\\pdfs\\\\Final Report Guidelines restrictive measures .pdf''\\); [print\\(f''=== PAGE {i+1} ===\\\\n{doc[i].get_text\\(\\)[:300]}\\\\n''\\) for i in range\\(21,27\\)]\")",
+      "Bash(python -c:*)",
+      "Bash(grep:*)",
+      "Bash(dir:*)"
+    ]
+  }
+}
